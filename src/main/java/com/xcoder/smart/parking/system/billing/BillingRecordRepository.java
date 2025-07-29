@@ -1,4 +1,6 @@
 package com.xcoder.smart.parking.system.billing;
 
-public interface BillingRecordRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BillingRecordRepository extends JpaRepository<BillingRecord, Long> {
 }

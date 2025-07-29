@@ -1,4 +1,6 @@
 package com.xcoder.smart.parking.system.event;
 
-public record VehicleEnteredEvent() {
+import java.time.LocalDateTime;
+
+public record VehicleEnteredEvent(String vehicleNumber, LocalDateTime entryTime) {
 }
