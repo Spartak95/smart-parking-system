@@ -24,6 +24,7 @@ public class SlotAllocationService {
         log.info("Allocated Slot {} to vehicle {}", slot.getSlotCode(), event.vehicleNumber());
     }
 
+    @EventListener
     public void handleVehicleExit(VehicleExitedEvent event) {
         slotRepository.findByVehicleNumber(event.vehicleNumber())
                 .ifPresentOrElse(slot -> {
